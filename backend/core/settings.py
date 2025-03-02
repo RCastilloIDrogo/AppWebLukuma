@@ -30,10 +30,17 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Apps del sistema
-    'menu',  # Tu app del restaurante
-    'rest_framework',  # Para la API
-    'corsheaders',  # Para permitir la comunicación con Angular
+    'productos',  # Gestión del menú y productos
+    'mesas',      # Gestión de mesas y QR
+    'pedidos',    # Gestión de pedidos
+    'usuarios',   # Gestión de usuarios y roles
+
+    # API
+    'rest_framework',
+    'corsheaders',
 ]
+
+AUTH_USER_MODEL = 'usuarios.Usuario'
 
 # Middleware
 MIDDLEWARE = [
